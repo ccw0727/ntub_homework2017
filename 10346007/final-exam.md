@@ -1,18 +1,15 @@
 Ruby 題
-
 1.變數是表示某個數字或字串，有可能會變更，但常數會保留所指派的值，並且不會再變更。
-2.其實是一樣的東西，但hash["hash"]有可能抓取不到字串，所以必須先with_indifferent_access
+2.其實是一樣的東西，但hash["hash"]有可能抓取不到字串，所以必須先使用with_indifferent_access。
 3.puts [*1..100].sample(5)
 4.存取範圍的不同，public是公開，private只限於類別內部使用，protected雖然也是只限類別內部，但可以繼承給子類別使用，所以介於兩者之間。
 
 Rails 題
-
-1.請任意舉出三個你在開發 Rails 專案時常用到的 gem，並說明你覺得這些 gem 厲害的地方或是你為什麼採用它們的原因。
-2.請問 User.find_by(id: 1) 跟 User.find(1) 這兩個寫法有什麼差別?
-3.Gemfile 裡 gem 'sass-rails', '~> 4.0.3' ，後面的 "~> 4.0.3" 是代表什麼意思?
-4.請簡述什麼是 N+1 問題? 又該怎麼解決它?
+1.(1)"cancancan" 聽起來就很厲害 (2)"devise" 因為感覺只需要輸入幾行就可以完成註冊、登入等等動作就覺得很神奇 (3)"paperclip" 可以上傳檔案和圖片的套件
+2.User.find_by(id: 1)如果找不到id資料會回傳nil；User.find(1)則會產生ActiveRecord::RecordNotFound例外訊息。
+3.是指會選則使用4.0.3以上的版本。
+4.會產生過多的資料庫查詢筆數，導致消耗大量不必要的記憶體；Rails可以用include方法解決，include會先將所有資料回傳，再一次性對所有資料做查詢。
 
 Git 題
-
-1.空的資料夾無法被加入 Git 版控，但這個資料夾如果又是很重要的資料夾，你會怎麼處理?
-2.在 Rails 專案中，/config/database.yml 這個檔案裡有資料庫的設定、帳號密碼等資訊，在使用 Git 時，你通常會怎麼處理這類型內容比較敏感的檔案?
+1.
+2.備份和加密
