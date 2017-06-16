@@ -55,3 +55,24 @@ N+1是資料庫的頭號問題。因為ActiveRecord的Association功能很方便
 
 解決方法，加上includes。
 
+Git 題
+
+1.
+可以在底下建立一個隱藏檔，例如 .gitkeep：
+
+cd log
+
+tocuh .gitkeep
+
+在跟「.git」同一層的目錄中，可以建立一個 .gitignore 檔案。
+
+.gitignore 用來設定「不希望被 Git 控管的檔案與資料夾」。
+
+2.
+設定 GitHub 專案的權限控管 - 組織帳號
+
+* Pull Only (唯讀)
+
+* Push & Pull (可讀可寫)
+
+* Push, Pull & Administrative (可讀可寫以及專案管理權限)
