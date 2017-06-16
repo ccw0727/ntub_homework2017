@@ -2,13 +2,16 @@
 
 1. 試說明在 Ruby 裡常數(constant)跟變數(variable)的差別。  
     答案：命名慣例上有所不同，變數是小寫開頭，常數是大寫開頭
+    
 2. 請問 hash[:key] 跟 hash["hash"] 有什麼差別?  
     答案：hash[:key] 會得到 key 對應的值，hash["hash"] 會得到 nil
+    
 3. 如果要在 1 到 100 的數字當中，任意取出 5 個不重複的亂數，你會怎麼做？  
     答案：
     ```ruby
     puts [*1..100].sample(5)
     ```
+    
 4. 試說明在 Ruby 裡 public、protected 與 private method 的差別。  
     答案：
     - public: 公開的大家都可以呼叫
@@ -22,10 +25,13 @@
     1. faker: 利用這個套件可以快速的產生測試資料不需要自己輸入讓開發更輕鬆快速
     2. devise: 利用這個套件可以快速的建立會員管理的機制
     3. simple_form: 讓表單的建立更加簡單 (打更少的字) 而且還可以搭配 Bootstrap 很方便
+    
 2. 請問 User.find_by(id: 1) 跟 User.find(1) 這兩個寫法有什麼差別?  
     答案：利用 find 尋找如果找不到會引發 `ActiveRecord::RecordNotFound` 例外，但利用 find_by 尋找時如果找不到會回傳 `nil`
-3. Gemfile 裡 gem 'sass-rails', '~> 4.0.3' ，後面的 "~> 4.0.3" 是代表什麼意思?  
+    
+3. Gemfile 裡 `gem 'sass-rails'`, `'~> 4.0.3'` ，後面的 `"~> 4.0.3"` 是代表什麼意思?  
     答案：使用 4.0.3 版本以上，但 4.1 版本以下的最新版
+    
 4. 請簡述什麼是 N+1 問題? 又該怎麼解決它?  
     答案：N+1 問題是指當有 10 筆資料時需要撈 DB 11 次。 比如說要列出所有 User 的購物紀錄，先從 User 資料表撈出所有 User 再跟據 User 去撈出所有的購物紀錄。 在 Rails 中如果要解決可以使用 includes() 的語法
 
